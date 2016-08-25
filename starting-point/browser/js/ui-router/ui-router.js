@@ -7,16 +7,14 @@ juke.config(function($stateProvider){
 
 	$stateProvider.state('album', {
 		templateUrl: './js/ui-router/albumControlTemplate.html',
-		url: '/albums/:id',
-		controller: function($scope, $stateParams) {
-			$scope.albumId = $stateParams.id
-		}
+		url: '/album/:albumId',
+		controller: 'AlbumCtrl'
 	});
 
 	$stateProvider.state('artists', {
 		templateUrl: './js/ui-router/artistsControlTemplate.html',
 		url: '/artists',
-		controller: "ArtistsCtrl"
+		controller: 'ArtistsCtrl'
 	})
 })
 
