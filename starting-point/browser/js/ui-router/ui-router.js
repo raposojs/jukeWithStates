@@ -15,6 +15,12 @@ juke.config(function($stateProvider){
 		templateUrl: './js/ui-router/artistsControlTemplate.html',
 		url: '/artists',
 		controller: 'ArtistsCtrl'
+	});
+
+	$stateProvider.state('artist', {
+		templateUrl: './js/ui-router/artistControlTemplate.html',
+		url: '/artist/:artistId',
+		controller: 'ArtistCtrl'
 	})
 })
 
